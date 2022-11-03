@@ -4,6 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   mode: 'development',
   entry: './src/app/index.js',
+  devtool: 'inline-source-map',
+  devServer: {
+    static: './dist',
+  },
   output: {
     filename: 'main.js',
     clean: true,
