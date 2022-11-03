@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "webpack serve --open --config ./build/dev.js"
+    "dev": "webpack serve --open --config ./build/dev.js",
+    "build": "webpack --config ./build/build"
   },
   "devDependencies": {
     "@swc/core": "^1.3.14",
