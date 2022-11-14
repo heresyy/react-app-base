@@ -1,6 +1,6 @@
-import El from '../../common/Element'
+import React from 'react'
 
 export default
 function Demo() {
-  return El('div', 'THIS IS A DEMO COMPONENT')
+  return <div>THIS IS A DEMO COMPONENT</div>
 }

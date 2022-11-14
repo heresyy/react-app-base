@@ -1,6 +1,6 @@
-import El from '../../common/Element'
+import React from 'react'
 
 export default
 function WidgetDemo() {
-  return El('span', {}, ['this is a widget'])
+  return <input />
 }

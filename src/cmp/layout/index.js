@@ -1,10 +1,10 @@
-import El from '../../common/Element'
+import React from 'react'
 
 export default
-function Layout(props, child) {
-  return El('div', [
-    El('header', 'this is header'),
-    child,
-    El('footer', 'this is footer')
-  ])
+function Layout({ children }) {
+  return <div>
+    <header>this is header</header>
+    {children}
+    <footer>this is footer</footer>
+  </div>
 }

@@ -1,10 +1,12 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
-import El from '../../common/Element'
+
+import Input from '../../widget/demo'
 
 export default
 function AnotherPage() {
-  return El(Link,
-    { to: '/' },
-    'back to home'
-  )
+  return <>
+    <Link to = '/'>back to home</Link>
+    <Input />
+  </>
 }
