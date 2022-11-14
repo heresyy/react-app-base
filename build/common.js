@@ -2,7 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './src/app/index.js',  
+  entry: './src/app/index.js',
   output: {
     filename: 'main.js',
     clean: true,
@@ -26,6 +26,10 @@ module.exports = {
       {
         test: /\.styl$/,
         use: ['style-loader', 'css-loader', 'stylus-loader']
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource'
       }
     ]
   }
