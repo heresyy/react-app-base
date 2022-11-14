@@ -8,10 +8,17 @@ export default
 createBrowserRouter([
   {
     path: '/',
-    element: <HomePage />
+    element: HomePage()
   },
   {
     path: '/another',
     element: <Suspense fallback = {<div>loading</div>}><AnotherPage /></Suspense>
+    // element: El(Suspense,
+    //   {
+    //     fallback: El('div', 'loading')
+    //   }, [
+    //     AnotherPage() // Error: AnotherPage is not a function
+    //   ]
+    // )
   }
 ])

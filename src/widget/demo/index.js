@@ -1,4 +1,4 @@
-import { El } from '../../common/Element'
+import El from '../../common/Element'
 
 export default
 function WidgetDemo() {

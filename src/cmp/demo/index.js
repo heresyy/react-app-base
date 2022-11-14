@@ -1,6 +1,6 @@
-import { Div } from '../../common/Element'
+import El from '../../common/Element'
 
 export default
 function Demo() {
-  return Div(['THIS IS A DEMO COMPONENT'])
+  return El('div', 'THIS IS A DEMO COMPONENT')
 }

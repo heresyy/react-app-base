@@ -1,15 +1,13 @@
 import React from 'react'
 
-export
+export default
 function El(Component, props, children = []) {
-  return React.createElement(Component, props, ...children)
-}
-
-export
-function Div(props, children) {
   if(props instanceof Array) {
     children = props
-    props = {}
+    props = null
+  } else if(typeof props == 'string') {
+    children = [props]
+    props = null
   }
-  return El('div', props, children)
+  return React.createElement(Component, props, ...children)
 }
