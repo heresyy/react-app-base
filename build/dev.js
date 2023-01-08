@@ -7,12 +7,12 @@ module.exports = {
     static: './dist',
     
     // 代理服务器
-    // proxy: {
-    //   '/api': {
-    //     target: 'http://18.143.135.109:8090/',
-    //     pathRewrite: { '^/api': '' },
-    //   }
-    // },
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8888/',
+        pathRewrite: { '^/api': '' },
+      }
+    },
 
     // BrowserRouter
     // historyApiFallback: true

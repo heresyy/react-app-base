@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 export default
 function HomePage() {
   return <Layout>
+    <h1>Home</h1>
     <Demo />
-    <Link to = '/another'>another page</Link>
   </Layout>
 }
