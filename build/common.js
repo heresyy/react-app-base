@@ -1,6 +1,20 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const TransformJS = {
+  loader: 'babel-loader',
+  options: {
+    plugins: [
+      'transform-react-pug',
+      'transform-react-jsx'
+    ],
+    presets: [
+      ['@babel/preset-env'],
+      ['@babel/preset-react']
+    ]
+  }
+}
+
 module.exports = {
   entry: './src/app/index.js',
   output: {
@@ -19,28 +33,12 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              ['@babel/preset-env'],
-              ['@babel/preset-react']
-            ]
-          }
-        }
+        use: TransformJS
       },
       {
         test: /\.coffee$/,
         use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                ['@babel/preset-env'],
-                ['@babel/preset-react']
-              ]
-            }
-          },
+          TransformJS,
           'coffee-loader'
         ]
       },

@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Layout from '../../cmp/layout'
 
 export default ->
-  <Layout>
-    <h1>another</h1>
-  </Layout>
+  [phone, setPhone] = useState()
+  useEffect ->
+    setPhone '110'
+  , []
+
+  person =
+    name: 'ppz'
+    address: '上海'
+  
+  pug"""
+    Layout
+      h1 another
+      p 这是一个 p
+      p name: #{person.name}, phone: #{phone}
+  """
