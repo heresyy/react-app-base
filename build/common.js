@@ -30,6 +30,21 @@ module.exports = {
         }
       },
       {
+        test: /\.coffee$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                ['@babel/preset-env'],
+                ['@babel/preset-react']
+              ]
+            }
+          },
+          'coffee-loader'
+        ]
+      },
+      {
         test: /\.styl$/,
         use: ['style-loader', 'css-loader', 'stylus-loader']
       },
