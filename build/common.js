@@ -20,7 +20,13 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
-          loader: "swc-loader"
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['@babel/preset-env'],
+              ['@babel/preset-react']
+            ]
+          }
         }
       },
       {
