@@ -16,7 +16,7 @@ const TransformJS = {
 }
 
 module.exports = {
-  entry: './src/app/index.js',
+  entry: './src/app/index.coffee',
   output: {
     filename: 'main.js',
     clean: true,

@@ -1,17 +1,16 @@
 import React, { Suspense } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 
-import HomePage from '../page/home'
-const AnotherPage = React.lazy(() => import('../page/another/index.coffee'))
+import HomePage from '../page/home/index.coffee'
+AnotherPage = React.lazy(() => import('../page/another/index.coffee'))
 
-export default
-createBrowserRouter([
+export default createBrowserRouter [
   {
-    path: '/',
+    path: '/'
     element: <HomePage />
-  },
+  }
   {
-    path: '/another',
+    path: '/another'
     element: <Suspense fallback = {<div>loading</div>}><AnotherPage /></Suspense>
   }
-])
+]

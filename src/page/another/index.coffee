@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import Layout from '../../cmp/layout'
+import Layout from '../../cmp/layout/index.coffee'
 
 export default ->
   [phone, setPhone] = useState()
