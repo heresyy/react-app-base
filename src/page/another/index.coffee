@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import { $ } from 'utils.rc'
+import { useState, useEffect } from 'react'
 
 import Layout from '../../cmp/layout/index.coffee'
 
@@ -12,9 +13,8 @@ export default ->
     name: 'ppz'
     address: '上海'
   
-  pug"""
-    Layout
-      h1 another
-      p 这是一个 p
-      p name: #{person.name}, phone: #{phone}
-  """
+  return $(Layout,
+    $.h1('another')
+    $.p('这是一个 p')
+    $.p("name: #{person.name}, phone: #{phone}")
+  )

@@ -1,4 +1,4 @@
-const config = require('./common')
+const config = require('./base')
 
 module.exports = {
   mode: 'development',
@@ -15,7 +15,7 @@ module.exports = {
     },
 
     // BrowserRouter
-    // historyApiFallback: true
+    historyApiFallback: true
   },
   ...config
 }

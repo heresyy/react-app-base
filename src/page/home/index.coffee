@@ -1,10 +1,9 @@
-import React from 'react'
+import { $ } from 'utils.rc'
 import Layout from '../../cmp/layout/index.coffee'
 import Demo from '../../cmp/demo/index.coffee'
-import { Link } from 'react-router-dom'
 
-export default -> pug"""
-  Layout
-    h1 Home
-    Demo
-"""
+export default ->
+  return $(Layout,
+    $.h1('Home')
+    $(Demo)
+  )

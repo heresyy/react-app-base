@@ -1,5 +1,3 @@
-import React from 'react'
+import { $ } from 'utils.rc'
 
-export default -> pug"""
-  div THIS IS A DEMO COMPONENT
-"""
+export default -> $.div('THIS IS A DEMO COMPONENT')

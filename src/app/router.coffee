@@ -1,3 +1,4 @@
+import { $ } from 'utils.rc'
 import React, { Suspense } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 
@@ -7,10 +8,12 @@ AnotherPage = React.lazy(() => import('../page/another/index.coffee'))
 export default createBrowserRouter [
   {
     path: '/'
-    element: <HomePage />
+    element: $(HomePage)
   }
   {
     path: '/another'
-    element: <Suspense fallback = {<div>loading</div>}><AnotherPage /></Suspense>
+    element: $(Suspense, { fallback: $.div('loading') },
+      $(AnotherPage)
+    )
   }
 ]
