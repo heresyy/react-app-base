@@ -1,21 +1,23 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const Path = require('path')
 
 module.exports = function build({
   entryDir = './src/app/entry',
   staticDir,
   staticSuffixes = /\.(png|svg|jpg|jpeg|gif)$/i,
+  title,
 }) {
   return {
     entry: entryDir + '/index.coffee',
     output: {
       filename: 'main.js',
       clean: true,
-      path: staticDir
+      path: Path.join(process.cwd(), staticDir) // 这里必须绝对路径
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: entryDir + '/index.html',
-        filename: staticDir + '/index.html'
+        title,
+        template: Path.join(__dirname, '../entry/index.html')
       }),
     ],
     module: {

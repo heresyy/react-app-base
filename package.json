@@ -2,10 +2,6 @@
   "name": "@ppzp/react-app-base",
   "version": "0.0.0",
   "license": "UNLICENSED",
-  "scripts": {
-    "dev": "webpack serve --open --config ./build/dev.js",
-    "pro": "webpack --config ./build/pro"
-  },
   "devDependencies": {
     "coffee-loader": "^4.0.0",
     "coffeescript": "^2.7.0",
@@ -22,7 +18,7 @@
     "@ppzp/utils": ">=0.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": ">6.0.0",
+    "react-router-dom": ">=6.0.0",
     "utils.rc": ">=0.0.0"
   }
 }

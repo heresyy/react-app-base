@@ -1,8 +1,10 @@
 const build = require('./base')
+const Path = require('path')
 
 module.exports = function buildDev({
   entryDir,
   staticSuffixes,
+  title,
 
   BrowserRouter,
   staticDir = './dist', // 代理服务器
@@ -16,6 +18,7 @@ module.exports = function buildDev({
 }) {
   return {
     ...build({
+      title,
       entryDir,
       staticDir,
       staticSuffixes,
@@ -23,7 +26,7 @@ module.exports = function buildDev({
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
-      static: staticDir,
+      static: Path.join(process.cwd(), staticDir),
       proxy,
       historyApiFallback: BrowserRouter
     }
