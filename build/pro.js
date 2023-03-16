@@ -1,6 +1,16 @@
-const config = require('./base')
+const build = require('./base')
 
-module.exports = {
-  mode: 'production',
-  ...config
+module.exports = function buildPro({
+  entryDir,
+  staticSuffixes,
+  staticDir = './dist',
+}) {
+  return {
+    ...build({
+      entryDir,
+      staticSuffixes,
+      staticDir,
+    }),
+    mode: 'production',
+  }
 }
