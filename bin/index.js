@@ -7,7 +7,7 @@ const [_0, _1, dir, _templateName] = process.argv
 const templateName = _templateName ?? 'bear'
 console.log(`正在创建以 ${templateName} 为模板的 React APP`)
 
-if(['bear', 'ppz'].indexOf(templateName) == -1) {
+if(['bear', 'ppz', 'sth2eat'].indexOf(templateName) == -1) {
   console.log('不存在的模板: ' + templateName)
   process.exit()
 }
