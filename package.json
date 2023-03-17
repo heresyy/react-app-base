@@ -1,8 +1,19 @@
 {
   "name": "@ppzp/create-react-app",
   "version": "0.0.0",
+  "description": "皮皮仔的 create-react-app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppz-pro/create-react-app.git"
+  },
+  "keywords": ["create-react-app", "ppz"],
+  "author": "gy0318",
   "license": "UNLICENSED",
   "bin": {
     "create-react-app": "bin/index.js"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/ppz-pro/create-react-app/issues"
+  },
+  "homepage": "https://github.com/ppz-pro/create-react-app"
 }
