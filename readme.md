@@ -22,7 +22,7 @@ npm create @ppzp/react-app appxx
 npm create @ppzp/react-app appxxx ppz
 ```
 
-### sth2eat
+##### sth2eat
 + coffeescript
 + stylus
 + react-router
