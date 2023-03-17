@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const FS = require('fs')
+const Path = require('path')
 
 const [_0, _1, dir, _templateName] = process.argv
 const templateName = _templateName ?? 'bear'
@@ -12,7 +13,7 @@ if(['bear'].indexOf(templateName) == -1) {
 }
 
 try {
-  FS.cpSync('./template/' + templateName, dir, {
+  FS.cpSync(Path.join(__dirname, '../template', templateName), dir, {
     errorOnExist: true,
     force: false,
     recursive: true
@@ -20,6 +21,8 @@ try {
 } catch(err) {
   if(err.code == 'ERR_FS_CP_EEXIST')
     console.log(`目录已存在: "${dir}"`)
+  else
+    throw err
 }
 
 console.log('创建成功')
