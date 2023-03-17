@@ -8,7 +8,7 @@ const absPath = relativePath => Path.join(process.cwd(), relativePath)
 exports.absPath = absPath
 
 exports.base = {
-  entry: 'src/index.js',
+  entry: './src/index.js',
   output: {
     filename: 'main.js',
     clean: true,
