@@ -1,31 +1,7 @@
 # React Framework
+坚持“充分暴露原则”，只做文件复制，不做封装
+
 + 打包 webpack
-+ 支持 coffeescript
-+ 支持 stylus
-
-##### peerDependencies
-``` bash
-npm install @ppzp/utils react react-dom react-router-dom utils.rc
-```
-
-##### devDependencies
-``` bash
-npm install -D coffee-loader coffeescript css-loader html-webpack-plugin style-loader stylus stylus-loader webpack webpack-cli webpack-dev-server
-```
-
-##### scripts
-``` json
-{
-  "dev": "webpack serve --open --config ./build/dev",
-  "pro": "webpack --config ./build/pro"
-}
-```
-
-##### 各工具
-+ [coffeescript](https://coffeescript.org/)
-+ [stylus](https://stylus-lang.com/)
-
-# Awsome PPZ React App
-+ @ppzp/create-react-app
-+ @ppzp/react-app
-+ @ppzp/react-app-bear 无路由，浅路径
++ 支持 [coffeescript](https://coffeescript.org/)
++ 支持 [stylus](https://stylus-lang.com/)
++ 不支持 jsx（不是暂时不支持，是以后也不支持）
