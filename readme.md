@@ -1,5 +1,5 @@
 # React Framework
-坚持“充分暴露原则”，只做文件复制，不做封装
+只做文件复制，不做封装
 
 + 打包 webpack
 + 支持 [coffeescript](https://coffeescript.org/)
